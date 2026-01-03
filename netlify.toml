@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[server]
+  force_ssl = true
+
+# This part fixes the "404 on Refresh" error common in React Single Page Apps
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
