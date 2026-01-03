@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "Blogify",
+    "description": "A full-stack blogging platform offering user authentication, rich text editing, and image uploads. Designed to provide a seamless content creation experience.",
+    "technologies": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
+    "repoLink": "https://github.com/yourusername/blogify",
+    "demoLink": "https://blogify-demo.com",
+    "image": "/images/blogify-preview.png"
+  },
+  {
+    "id": 2,
+    "title": "TaskMaster",
+    "description": "A drag-and-drop kanban board for project management. Features real-time updates and team collaboration tools.",
+    "technologies": ["React", "TypeScript", "Redux", "Firebase"],
+    "repoLink": "https://github.com/yourusername/taskmaster",
+    "image": "/images/taskmaster-preview.png"
+  }
+]
