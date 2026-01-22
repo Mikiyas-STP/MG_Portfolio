@@ -1,11 +1,20 @@
+import { motion } from 'framer-motion'; // 1. Import
 import type { Project } from '../../types';
+
 interface ProjectCardProps {
   project: Project;
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white flex flex-col h-full">
+    // 2. Change to motion.div
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }} // Start invisible and 50px lower
+      whileInView={{ opacity: 1, y: 0 }} // Animate to visible when in screen
+      transition={{ duration: 0.5 }} // Take 0.5 seconds
+      viewport={{ once: true }} // Only animate once (don't keep flashing as you scroll up/down)
+      className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white flex flex-col h-full"
+    >
       <div className="mb-4">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-gray-600 line-clamp-3">
@@ -23,7 +32,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
