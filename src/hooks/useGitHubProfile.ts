@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GitHubProfile } from '../types';
-
+import type { GitHubProfile } from '../types';
 export const useGitHubProfile = (username: string) => {
   // 1. State for the data
   const [profile, setProfile] = useState<GitHubProfile | null>(null);
