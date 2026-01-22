@@ -13,3 +13,15 @@ export interface SocialLink {
   url: string;
   icon: string;     //We will store the icon name here later
 }
+
+// ... (Your Project and SocialLink interfaces are above this)
+
+export interface GitHubProfile {
+  name: string;
+  login: string;
+  bio: string;
+  avatar_url: string;
+  public_repos: number;
+  followers: number;
+  html_url: string;
+}
