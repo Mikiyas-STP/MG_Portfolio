@@ -32,7 +32,7 @@ const Hero = () => {
         
         {/* Greeting */}
         <motion.h2 variants={itemVariants} className="text-xl md:text-2xl text-gray-600 mb-4 font-medium">
-          Hello, I'm [Your Name] 👋
+          Hello, I'm Mikiyas 👋
         </motion.h2>
         
         {/* Headline */}
@@ -52,7 +52,7 @@ const Hero = () => {
           <a href="#projects" className="bg-slate-900 text-white px-8 py-3 rounded-full font-medium hover:bg-slate-800 transition-colors">
             View My Work
           </a>
-          <a href="mailto:email@example.com" className="border border-gray-300 text-slate-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors">
+          <a href="mailto:mikiyasgebremichaell@gmail.com" className="border border-gray-300 text-slate-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors">
             Contact Me
           </a>
         </motion.div>

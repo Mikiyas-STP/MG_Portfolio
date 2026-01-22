@@ -6,14 +6,14 @@
     "technologies": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
     "repoLink": "https://github.com/yourusername/blogify",
     "demoLink": "https://blogify-demo.com",
-    "image": "/images/blogify-preview.png"
+    "image": "/public/images/Screenshot 2026-01-22 at 18.05.07.png"
   },
   {
     "id": 2,
-    "title": "TaskMaster",
+    "title": "Plan Your Future",
     "description": "A drag-and-drop kanban board for project management. Features real-time updates and team collaboration tools.",
     "technologies": ["React", "TypeScript", "Redux", "Firebase"],
     "repoLink": "https://github.com/yourusername/taskmaster",
-    "image": "/images/taskmaster-preview.png"
+    "image": "/public/images/Screenshot 2026-01-22 at 18.05.07.png"
   }
 ]
