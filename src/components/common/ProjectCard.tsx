@@ -1,3 +1,5 @@
+// src/components/common/ProjectCard.tsx - FINAL VERSION
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Project } from '../../types';
@@ -17,39 +19,37 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       <Link 
         to={`/project/${project.id}`} 
-        className="block h-full border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow bg-white flex flex-col relative"
+        className="block h-full bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-slate-700" 
       >
-        <span className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
-        FULL-STACK
-    </span>
-        {/* 1. NEW: Image Section */}
-        {/* We use h-48 to force a consistent height for all images */}
-        <div className="h-48 overflow-hidden bg-gray-100 border-b border-gray-100">
+        {/* Image Container with Dark Gradient Overlay */}
+        <div className="aspect-video overflow-hidden bg-gray-100 border-b border-gray-300 relative">
           <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-            // Fallback if image fails
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.03]"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x200?text=No+Image';
             }}
           />
+          {/* Subtle Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent"></div>
         </div>
 
-        {/* Content Section */}
+        {/* Content Section - Dark text on white card */}
         <div className="p-6 flex flex-col flex-grow">
           <div className="mb-4">
-            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-            <p className="text-gray-600 line-clamp-3 text-sm">
+            <h3 className="text-xl font-bold mb-2 text-slate-900">{project.title}</h3>
+            <p className="text-slate-600 line-clamp-3 text-sm">
               {project.description}
             </p>
           </div>
           
+          {/* Tech Tags */}
           <div className="mt-auto pt-4 flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <span 
                 key={tech} 
-                className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                className="bg-gray-200 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded"
               >
                 {tech}
               </span>

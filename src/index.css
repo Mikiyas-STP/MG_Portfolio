@@ -1,40 +1,71 @@
+/* src/index.css - FINAL AESTHETIC STYLES */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth; /* <--- THE MAGIC LINE */
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
 }
+
 body {
-    /* Use a very subtle, repeating dot pattern or texture on the background. */
-    /* This makes it feel technical without being distracting. */
-    /* Example: Tweak the colors to match your dark/light theme */
-    background-image: radial-gradient(#000000 0.5px, transparent 0.5px), radial-gradient(#000000 0.5px, #ffffff 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    
-    /* Using Tailwind Utility (easier): bg-white is cleaner */
-    @apply bg-white text-gray-800 antialiased; 
-}
-/* Revert to Tailwind: The problem is in the components, not the body */
-
-
-/* src/index.css - Add this to the end of the file */
-
-/* Custom Scrollbar for a Technical Look */
-::-webkit-scrollbar {
-  width: 8px;
+  /* Set background to transparent so the animated element in main.tsx shows through */
+  background-color: transparent; 
+  @apply text-gray-100 antialiased; 
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light gray track */
+/* --- STARFIELD BACKGROUND STYLES (PURE CSS) --- */
+.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  background-color: #0f172a; /* Deep slate background */
+  overflow: hidden; 
 }
 
-::-webkit-scrollbar-thumb {
-  background: #94a3b8; /* Tailwind slate-400 */
-  border-radius: 4px;
+.stars-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: move-stars 100s linear infinite;
+  background-repeat: repeat;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b; /* Tailwind slate-500 */
+.layer-1 {
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0));
+  background-size: 100px 100px;
+  opacity: 0.5;
 }
+
+.layer-2 {
+  background-image: radial-gradient(3px 3px at 50px 100px, #99d, rgba(0,0,0,0)), radial-gradient(3px 3px at 150px 200px, #ccf, rgba(0,0,0,0));
+  background-size: 200px 200px;
+  animation-duration: 150s;
+  opacity: 0.3;
+}
+
+.layer-3 {
+  background-image: radial-gradient(4px 4px at 0px 150px, #bbf, rgba(0,0,0,0)), radial-gradient(4px 4px at 200px 250px, #cce, rgba(0,0,0,0));
+  background-size: 300px 300px;
+  animation-duration: 200s;
+  opacity: 0.15;
+}
+
+@keyframes move-stars {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-2000px, 1000px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }

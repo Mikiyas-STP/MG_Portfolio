@@ -1,73 +1,80 @@
-import { motion } from 'framer-motion'; // 1. Import Motion
+// src/features/hero/Hero.tsx - FINAL LAUNCH-READY VERSION
+
+import { motion } from 'framer-motion';
 import { useGitHubProfile } from '../../hooks/useGitHubProfile';
 import StatCard from '../../components/common/StatCard';
 
 const Hero = () => {
-  const { profile, loading, error } = useGitHubProfile('your-real-username'); // ⚠️ Put your username here again!
+  // ⚠️ Ensure your GitHub username is correct here!
+  const { profile, loading, error } = useGitHubProfile('Mikiyas-STP'); 
 
-  // 2. Define Animation Variants (The Recipe)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between each child element
+        staggerChildren: 0.1, 
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }, // Start slightly lower and invisible
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Float up
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.17, 0.55, 0.55, 1] } },
   };
 
   return (
-    <section className="py-20 md:py-32 max-w-4xl mx-auto text-center px-4">
-      {/* 3. Wrap everything in a motion container */}
+    <section className="py-24 md:py-40 max-w-4xl mx-auto text-center px-4">
+      
       <motion.div 
-  variants={containerVariants}
-  initial="hidden"
-  animate="visible"
-  // NEW: Add background and subtle border/shadow to look like a frame
-  className="bg-white p-4 md:p-8 rounded-xl shadow-xl border border-gray-100" 
->
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         
-        {/* Greeting */}
-        <motion.h2 variants={itemVariants} className="text-xl md:text-2xl text-gray-600 mb-4 font-medium">
-          Hello, I'm Mikiyas 👋
+        {/* Job Title: Primary Color Highlight */}
+        <motion.h2 
+          variants={itemVariants} 
+          className="text-lg md:text-xl text-cyan-400 font-semibold mb-3 tracking-widest uppercase"
+        >
+          Full-Stack Developer (PERN Specialist)
         </motion.h2>
         
-        {/* Headline */}
+        {/* Headline: Main Impact */}
         <motion.h1 
-        variants={itemVariants} 
-        className="text-5xl md:text-7xl font-extrabold text-black tracking-tight mb-6"
-    >
-        <span className="text-gray-400 font-mono text-xl md:text-2xl block mb-4">Full-Stack Developer</span>
-        Building 
-        <span className="text-indigo-600"> Digital Products </span>
-        <br className="hidden md:block" />
-         that matter.
+          variants={itemVariants} 
+          className="text-6xl md:text-8xl font-extrabold text-white tracking-tight mb-6 leading-tight"
+        >
+          Building products <br />
+          with <span className="text-cyan-400">React & Node.</span>
+        </motion.h1>
         
-    </motion.h1>
-        
-        {/* Subtext */}
-        <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-          I am a Full-Stack Developer focused on React and Node.js. 
-          I transform complex problems into beautiful, scalable, and user-friendly web interfaces.
+        {/* Subtext: Value Proposition */}
+        <motion.p 
+          variants={itemVariants} 
+          className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+        >
+          I turn complex problem statements into elegant, scalable, and fully-tested applications using TypeScript, PostgreSQL, and modern cloud deployment strategies.
         </motion.p>
 
         {/* Buttons */}
         <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-12">
-          <a href="#projects" className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold shadow-xl hover:bg-indigo-700 transition-all duration-300 transform hover:scale-[1.02]">
-            View My Work
+          <a 
+            href="#projects" 
+            className="bg-cyan-400 text-slate-900 px-8 py-3 rounded-lg font-semibold shadow-md hover:bg-cyan-300 transition-all"
+          >
+            View My Case Studies
           </a>
-          <a href="#contact" className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+          <a 
+            href="#contact" 
+            className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+          >
             Contact Me
           </a>
         </motion.div>
 
-        {/* Stats */}
-        {!error && (
+        {/* Stats Section */}
+        {!error && !loading && (
           <motion.div variants={itemVariants} className="flex justify-center gap-6 md:gap-10">
             <StatCard 
               label="Repos" 
@@ -81,6 +88,12 @@ const Hero = () => {
             />
           </motion.div>
         )}
+        
+        {/* Show error if necessary */}
+        {error && (
+            <p className="text-red-500 mt-4">Could not load GitHub stats. Please check the console for details.</p>
+        )}
+        
       </motion.div>
     </section>
   );

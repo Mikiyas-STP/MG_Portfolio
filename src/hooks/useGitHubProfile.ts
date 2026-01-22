@@ -17,7 +17,7 @@ export const useGitHubProfile = (username: string) => {
         setError(null);
 
         const response = await fetch(`https://api.github.com/users/${username}`);
-
+        console.log('GitHub API Status:', response.status);
         if (!response.ok) {
           throw new Error('Failed to fetch GitHub profile');
         }
