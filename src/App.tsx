@@ -1,16 +1,15 @@
-import { Routes, Route } from 'react-router-dom'; // 1. Import Routing tools
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
+import ProjectDetails from './pages/ProjectDetails'; // 1. Import
 
 function App() {
   return (
     <Layout>
-      {/* 2. Define the Routing Table */}
       <Routes>
-        {/* If URL is "/", show Home */}
         <Route path="/" element={<Home />} />
-        
-        {/* Future routes will go here (e.g., /project/:id) */}
+        {/* 2. The Dynamic Route. :id matches anything (1, 2, 99) */}
+        <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
     </Layout>
   );
