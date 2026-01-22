@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* You can add global styles here if needed, but we try to avoid it */
+html {
+  scroll-behavior: smooth; /* <--- THE MAGIC LINE */
+}
+
 body {
   @apply bg-white text-slate-900 antialiased;
 }
