@@ -1,12 +1,17 @@
+import { Routes, Route } from 'react-router-dom'; // 1. Import Routing tools
 import Layout from './components/layout/Layout';
-import Hero from './features/hero/Hero';
-import ProjectList from './features/projects/ProjectList';
+import Home from './pages/Home';
 
 function App() {
   return (
     <Layout>
-      <Hero />
-      <ProjectList />
+      {/* 2. Define the Routing Table */}
+      <Routes>
+        {/* If URL is "/", show Home */}
+        <Route path="/" element={<Home />} />
+        
+        {/* Future routes will go here (e.g., /project/:id) */}
+      </Routes>
     </Layout>
   );
 }
