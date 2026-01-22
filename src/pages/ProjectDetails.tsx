@@ -72,8 +72,12 @@ const ProjectDetails = () => {
       </div>
 
       {/* Placeholder for Image (We will add real images in the final step) */}
-      <div className="aspect-video bg-gray-100 rounded-2xl flex items-center justify-center border border-gray-200">
-        <p className="text-gray-400">Project Screenshot Placeholder</p>
+      <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover"
+        />
       </div>
     </section>
   );

@@ -3,17 +3,36 @@
     "id": 1,
     "title": "Blogify",
     "description": "A full-stack blogging platform offering user authentication, rich text editing, and image uploads. Designed to provide a seamless content creation experience.",
-    "technologies": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
-    "repoLink": "https://github.com/yourusername/blogify",
-    "demoLink": "https://blogify-demo.com",
-    "image": "/public/images/Screenshot 2026-01-22 at 18.05.07.png"
+    "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
+    "repoLink": "https://github.com/Mikiyas-STP/Blogify",
+    "demoLink": "#",
+    "image": "/images/Blogify-Logo.webp"
   },
   {
     "id": 2,
     "title": "Plan Your Future",
-    "description": "A drag-and-drop kanban board for project management. Features real-time updates and team collaboration tools.",
-    "technologies": ["React", "TypeScript", "Redux", "Firebase"],
-    "repoLink": "https://github.com/yourusername/taskmaster",
-    "image": "/public/images/Screenshot 2026-01-22 at 18.05.07.png"
+    "description": "Plan Your Future, Launch Your Career. The essential development planner for CodeYourFuture graduates. Set SMART goals, track your progress, and get feedback",
+    "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
+    "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
+    "demoLink": "https://planyourfuture-frontend.hosting.codeyourfuture.io/",
+    "image": "/images/Screenshot 2026-01-22 at 18.05.07.png"
+  },
+  {
+    "id": 3,
+    "title": "ChatApp",
+    "description": "A lightweight chat application implemented in JavaScript using WebSockets to enable real-time bidirectional communication. Each client maintains an open WebSocket connection with the server. Messages sent by a user are received by the server and broadcast to every connected client, allowing immediate updates in the chat interface.",
+    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
+    "repoLink": "https://github.com/Mikiyas-STP/ChatAppRefined",
+    "demoLink": "#",
+    "image": "/images/61x3GIwnW0L.png"
+  },
+  {
+    "id": 4,
+    "title": "Collaboration Board",
+    "description": "A real-time collaborative whiteboard implemented in JavaScript using WebSockets for bidirectional communication. The client captures drawing events from the canvas and sends them to the server, which then broadcasts the events to all connected users. This makes the shared board update immediately across all sessions.",
+    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
+    "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
+    "demoLink": "https://planyourfuture-frontend.hosting.codeyourfuture.io/",
+    "image": "/images/advisory-board-icon-element-design-600nw-2677135321.webp"
   }
 ]

@@ -5,7 +5,36 @@
 html {
   scroll-behavior: smooth; /* <--- THE MAGIC LINE */
 }
-
 body {
-  @apply bg-white text-slate-900 antialiased;
+    /* Use a very subtle, repeating dot pattern or texture on the background. */
+    /* This makes it feel technical without being distracting. */
+    /* Example: Tweak the colors to match your dark/light theme */
+    background-image: radial-gradient(#000000 0.5px, transparent 0.5px), radial-gradient(#000000 0.5px, #ffffff 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    
+    /* Using Tailwind Utility (easier): bg-white is cleaner */
+    @apply bg-white text-gray-800 antialiased; 
+}
+/* Revert to Tailwind: The problem is in the components, not the body */
+
+
+/* src/index.css - Add this to the end of the file */
+
+/* Custom Scrollbar for a Technical Look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8; /* Tailwind slate-400 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* Tailwind slate-500 */
 }
