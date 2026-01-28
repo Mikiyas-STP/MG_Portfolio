@@ -1,13 +1,16 @@
-// src/pages/ProjectDetails.tsx - FINAL VERSION (Case Study Template)
+// src/pages/ProjectDetails.tsx - FINAL DYNAMIC CASE STUDY VERSION
 
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import { getProjectById } from '../utils/projectUtils';
+import { getCaseStudyById } from '../data/projectCaseStudies'; // ⬅️ NEW IMPORT
 import { useEffect } from 'react';
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
-  const project = getProjectById(Number(id));
+  const projectId = Number(id);
+  const project = getProjectById(projectId);
+  const caseStudy = getCaseStudyById(projectId); // ⬅️ GET CASE STUDY DATA
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,7 +26,6 @@ const ProjectDetails = () => {
   }
 
   return (
-    // 1. New: White Paper/Case Study Container
     <section className="py-12 md:py-20 max-w-5xl mx-auto px-4 relative z-10">
       <div className="bg-white p-6 md:p-12 rounded-xl shadow-2xl border border-gray-100 text-slate-900">
 
@@ -33,11 +35,12 @@ const ProjectDetails = () => {
           Back to Projects
         </Link>
 
-        {/* 2. Header and Main Image */}
+        {/* Header and Main Image */}
         <h1 className="text-4xl md:text-5xl font-extrabold mb-3">{project.title}</h1>
         <p className="text-xl text-slate-600 mb-8 max-w-3xl">{project.description}</p>
         
         {/* Links (Repo & Live Demo) */}
+        {/* ... (Keep your links code here, no change) ... */}
         <div className="flex gap-4 mb-10">
           <a 
             href={project.repoLink} 
@@ -61,6 +64,7 @@ const ProjectDetails = () => {
           )}
         </div>
 
+
         {/* Image Display */}
         <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-lg mb-12 border border-gray-200">
           <img 
@@ -70,22 +74,32 @@ const ProjectDetails = () => {
           />
         </div>
 
-        {/* 3. Case Study Body (Start writing your technical story here!) */}
-        <h3 className="text-3xl font-bold mb-4 border-b pb-2">Technical Deep Dive</h3>
-        
-        <p className="text-slate-700 mb-6 leading-relaxed">
-            **The Challenge:** The primary goal was to demonstrate full-stack proficiency. I chose the PERN stack to show my ability to build a scalable and type-safe environment from the database up to the UI.
-        </p>
+        {/* 3. FINAL DYNAMIC CASE STUDY BODY */}
+        {caseStudy && (
+            <>
+                {/* The Challenge */}
+                <h3 className="text-3xl font-bold mb-4 border-b pb-2">The Challenge</h3>
+                <p className="text-slate-700 mb-6 leading-relaxed">
+                    {caseStudy.challenge}
+                </p>
 
-        <h4 className="text-2xl font-bold mt-8 mb-3">Key Architectural Decisions</h4>
-        <ul className="list-disc list-inside space-y-2 text-slate-700">
-            <li>**State Management:** Implemented the `useReducer` and `useContext` pattern for predictable global state management, avoiding Prop Drilling.</li>
-            <li>**Backend:** Utilized Express and Node.js for a non-blocking API layer, ensuring high concurrency under load.</li>
-            <li>**Database:** Designed a normalized PostgreSQL schema and implemented SQL indexing for fast read performance.</li>
-            <li>**TypeScript:** Enforced strict typing across both the React frontend and the Express backend (a must for real-world projects).</li>
-        </ul>
+                {/* The Solution */}
+                <h3 className="text-3xl font-bold mb-4 border-b pb-2">My Solution</h3>
+                <p className="text-slate-700 mb-6 leading-relaxed">
+                    {caseStudy.solution}
+                </p>
+
+                {/* Key Decisions */}
+                <h4 className="text-2xl font-bold mt-8 mb-3">Key Architectural Decisions</h4>
+                <ul className="list-disc list-inside space-y-2 text-slate-700">
+                    {caseStudy.architectureDecisions.map((decision, index) => (
+                        <li key={index}>{decision}</li>
+                    ))}
+                </ul>
+            </>
+        )}
         
-        {/* Tech Stack List */}
+        {/* Tech Stack List (This remains the same, using data from projects.json) */}
         <h4 className="text-2xl font-bold mt-8 mb-3">Technology Used</h4>
         <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
