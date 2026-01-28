@@ -37,7 +37,7 @@ const Hero = () => {
           variants={itemVariants} 
           className="text-lg md:text-xl text-cyan-400 font-semibold mb-3 tracking-widest uppercase"
         >
-          Full-Stack Developer (PERN Specialist)
+          Software Developer (PERN Specialist)
         </motion.h2>
         
         {/* Headline: Main Impact */}
@@ -54,7 +54,7 @@ const Hero = () => {
           variants={itemVariants} 
           className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
-          I turn complex problem statements into elegant, scalable, and fully-tested applications using TypeScript, PostgreSQL, and modern cloud deployment strategies.
+          I turn complex problem statements into elegant, scalable, and fully-tested applications using React, PostgreSQL, and modern cloud deployment strategies.
         </motion.p>
 
         {/* Buttons */}

@@ -18,16 +18,16 @@ const AboutMe = () => {
                 
                 <div className="space-y-6 text-slate-300">
                     <p>
-                        **Professional Story:** I began my journey by successfully completing a full-stack project using the PERN stack (PostgreSQL, Express, React, Node). This experience provided the foundation for engineering principles, leading to a deep focus on **React and TypeScript mastery.**
+                        Professional Story: I began my journey by successfully completing a full-stack project using the PERN stack (PostgreSQL, Express, React, Node). This experience provided the foundation for engineering principles, leading to a deep focus on **React and TypeScript mastery.
                     </p>
                     <p>
-                        **Technical Focus:** My specialty lies in creating well-architected, performant front-end solutions. I prioritize clean code, automated testing, and functional programming patterns to ensure long-term maintainability. I treat code as a liability, not an asset, always striving for simplicity.
+                        Technical Focus: My specialty lies in creating well-architected, performant front-end solutions. I prioritize clean code, automated testing, and functional programming patterns to ensure long-term maintainability. I treat code as a liability, not an asset, always striving for simplicity.
                     </p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 pt-4">Beyond the Code</h3>
                     <ul className="list-disc list-inside space-y-1 pl-4 text-sm">
-                        <li>**Hobbies:** I enjoy [Your Hobby 1] and [Your Hobby 2], which helps me [Skill Transfer, e.g., apply creative problem-solving].</li>
-                        <li>**Community:** I actively participate in [Local Dev Group] or contribute to [Small Open Source Project].</li>
+                        <li>Hobbies: I enjoy [Your Hobby 1] and [Your Hobby 2], which helps me [Skill Transfer, e.g., apply creative problem-solving].</li>
+                        <li>Community: I actively participate in [Local Dev Group] or contribute to [Small Open Source Project].</li>
                     </ul>
                 </div>
             </motion.div>

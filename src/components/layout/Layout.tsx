@@ -1,4 +1,4 @@
-// src/components/layout/Layout.tsx - FINAL NAVIGATION VERSION
+// src/components/layout/Layout.tsx - FINAL, TRANSPARENT NAVIGATION VERSION
 
 import { ReactNode } from 'react';
 import { socialLinks } from '../../data/socials';
@@ -11,45 +11,45 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* HEADER: Floating, Glassy, Professional NavBar */}
-      <header className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 shadow-xl">
+      
+      {/* HEADER: Floating, Translucent (Glassy) NavBar */}
+      {/* Key Fix: bg-white/10 (highly transparent) + backdrop-blur + strong shadow */}
+      <header className="bg-white/10 backdrop-blur-lg sticky top-0 z-50 border-b border-white/20 shadow-2xl">
         <nav className="max-w-4xl mx-auto flex justify-between items-center p-4">
           
-          {/* Logo: Clean Text Logo */}
-          <span className="font-bold text-xl tracking-tight text-slate-900">
+          {/* Logo: Clean Text Logo (White text to stand out on dark background) */}
+          <span className="font-bold text-xl tracking-tight text-white">
             Mikiyas Portfolio
           </span>
           
-          {/* Navigation Links: Pill-Style */}
+          {/* Navigation Links: Pill-Style (Text color must be white for visibility) */}
           <ul className="flex gap-2 text-sm font-medium"> 
             <li>
               <a 
                 href="#projects" 
-                className="hover:bg-cyan-100 px-3 py-2 rounded-full text-slate-700 hover:text-slate-900 transition-all font-semibold"
+                // Hover effect uses transparent white background
+                className="hover:bg-white/20 px-3 py-2 rounded-full text-white transition-all font-semibold"
               >
                 Projects
               </a>
             </li>
 
-
-             {/* NEW: CV/Resume Link */}
-    <li>
-        <a 
-            href="public/images/cv-template.pdf" // ⬅️ IMPORTANT: Update this path! (Place your PDF in the 'public' folder)
-            target="_blank"
-            className="bg-cyan-400 px-3 py-2 rounded-full text-slate-900 font-semibold hover:bg-cyan-300 transition-all"
-        >
-            Resume
-        </a>
-    </li>
+            {/* NEW: CV/Resume Link - Primary CTA */}
+            <li>
+                <a 
+                    // CRITICAL FIX: The path to a file in 'public' should start with a /
+                    href="/images/cv-template.pdf" 
+                    target="_blank"
+                    className="bg-cyan-400 px-3 py-2 rounded-full text-slate-900 font-semibold hover:bg-cyan-300 transition-all"
+                >
+                    Resume
+                </a>
+            </li>
             
-
-
-
             <li>
               <a 
                 href="#contact" 
-                className="hover:bg-cyan-100 px-3 py-2 rounded-full text-slate-700 hover:text-slate-900 transition-all font-semibold"
+                className="hover:bg-white/20 px-3 py-2 rounded-full text-white transition-all font-semibold"
               >
                 Contact
               </a>

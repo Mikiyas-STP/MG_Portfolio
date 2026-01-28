@@ -69,3 +69,10 @@ body {
 ::-webkit-scrollbar-track { background: #1e293b; }
 ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.5); /* Cyan color with opacity */
+  border-radius: 4px; /* Soften the corners */
+}

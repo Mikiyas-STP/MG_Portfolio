@@ -1,4 +1,4 @@
-// src/components/common/ProjectCard.tsx - FINAL VERSION
+// src/components/common/ProjectCard.tsx - FINAL, A++ VERSION
 
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -19,16 +19,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       <Link 
         to={`/project/${project.id}`} 
-        className="block h-full bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-slate-700" 
+        // ADDED: cursor-pointer for excellent UX (and retained all visual styling)
+        className="block h-full bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-slate-700 cursor-pointer" 
       >
-        {/* Image Container with Dark Gradient Overlay */}
+        {/* Image Container with Fixed 16:9 Aspect Ratio (The Fix for Consistency) */}
         <div className="aspect-video overflow-hidden bg-gray-100 border-b border-gray-300 relative">
           <img 
             src={project.image} 
             alt={project.title} 
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.03]"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x200?text=No+Image';
+              // Fallback to maintain the 16:9 aspect ratio if the image link is broken
+              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x225?text=NO+IMAGE'; 
             }}
           />
           {/* Subtle Gradient Overlay */}
