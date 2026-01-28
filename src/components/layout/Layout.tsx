@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { socialLinks } from '../../data/socials';
 import SocialIcon from '../common/SocialIcon';
+import {  Link } from 'react-router-dom';
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,11 +17,11 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Key Fix: bg-white/10 (highly transparent) + backdrop-blur + strong shadow */}
       <header className="bg-white/10 backdrop-blur-lg sticky top-0 z-50 border-b border-white/20 shadow-2xl">
         <nav className="max-w-4xl mx-auto flex justify-between items-center p-4">
-          
-          {/* Logo: Clean Text Logo */}
-          <span className="font-bold text-xl tracking-tight text-white">
-            <span className="text-cyan-400">S/W</span> Eng | PERN Stack
-          </span>
+          <Link to="/" className="font-bold text-xl tracking-tight text-white transition-colors hover:text-cyan-400">
+            <span className="text-cyan-400">S/W Eng</span> | <span className="text-cyan-400">PERN Stack</span>
+          </Link>
+
+    
           
           {/* Navigation Links: Pill-Style (Text color must be white for visibility) */}
           <ul className="flex gap-2 text-sm font-medium"> 
@@ -88,10 +89,14 @@ const Layout = ({ children }: LayoutProps) => {
               </a>
             ))}
           </div>
-          
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Built with React, TypeScript & Tailwind
-          </p>
+          <div className="border-t border-slate-700 pt-6">
+              <p className="text-sm text-gray-400">
+                  © {new Date().getFullYear()} Mikiyas Portfolio. All rights reserved.
+              </p>
+              <p className="text-xs text-slate-500 mt-1">
+                  Built with React, TypeScript, Tailwind, and deployed via Netlify.
+              </p>
+          </div>
         </div>
       </footer>
     </div>
