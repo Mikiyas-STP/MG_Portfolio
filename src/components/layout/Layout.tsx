@@ -17,17 +17,24 @@ const Layout = ({ children }: LayoutProps) => {
       <header className="bg-white/10 backdrop-blur-lg sticky top-0 z-50 border-b border-white/20 shadow-2xl">
         <nav className="max-w-4xl mx-auto flex justify-between items-center p-4">
           
-          {/* Logo: Clean Text Logo (White text to stand out on dark background) */}
+          {/* Logo: Clean Text Logo */}
           <span className="font-bold text-xl tracking-tight text-white">
-            Mikiyas Portfolio
+            <span className="text-cyan-400">S/W</span> Eng | PERN Stack
           </span>
           
           {/* Navigation Links: Pill-Style (Text color must be white for visibility) */}
           <ul className="flex gap-2 text-sm font-medium"> 
             <li>
+                <a 
+                    href="#skills" // ⬅️ NEW LINK TO SKILLS SECTION
+                    className="hover:bg-white/20 px-3 py-2 rounded-full text-white transition-all font-semibold"
+                >
+                    Skills
+                </a>
+            </li>
+            <li>
               <a 
                 href="#projects" 
-                // Hover effect uses transparent white background
                 className="hover:bg-white/20 px-3 py-2 rounded-full text-white transition-all font-semibold"
               >
                 Projects

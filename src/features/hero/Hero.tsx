@@ -1,13 +1,14 @@
-// src/features/hero/Hero.tsx - FINAL LAUNCH-READY VERSION
+// src/features/hero/Hero.tsx - FINAL COMPRESSED & OPTIMIZED VERSION
 
 import { motion } from 'framer-motion';
 import { useGitHubProfile } from '../../hooks/useGitHubProfile';
 import StatCard from '../../components/common/StatCard';
 
 const Hero = () => {
-  // ⚠️ Ensure your GitHub username is correct here!
+  // CONFIRMED USERNAME (This must be correct for the stats to appear)
   const { profile, loading, error } = useGitHubProfile('Mikiyas-STP'); 
 
+  // Framer Motion Variants (Ensures smooth entrance animation)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,7 +25,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-24 md:py-40 max-w-4xl mx-auto text-center px-4">
+    // Reduced Vertical Padding for a compact look
+    <section className="py-16 md:py-28 max-w-4xl mx-auto text-center px-4"> 
       
       <motion.div 
         variants={containerVariants}
@@ -32,38 +34,47 @@ const Hero = () => {
         animate="visible"
       >
         
-        {/* Job Title: Primary Color Highlight */}
-        <motion.h2 
+        {/* Line 1: The Personal Hook (Smaller Top Margin) */}
+        <motion.p 
           variants={itemVariants} 
-          className="text-lg md:text-xl text-cyan-400 font-semibold mb-3 tracking-widest uppercase"
+          className="text-xl md:text-2xl text-slate-200 font-medium mb-2" 
         >
-          Software Developer (PERN Specialist)
-        </motion.h2>
-        
-        {/* Headline: Main Impact */}
+          Hi, I'm Mikiyas.
+        </motion.p>
+
+        {/* Line 2: The Core Job Title (Largest, Tight Line Height) */}
         <motion.h1 
           variants={itemVariants} 
-          className="text-6xl md:text-8xl font-extrabold text-white tracking-tight mb-6 leading-tight"
+          // Reduced to 6xl/7xl for better vertical fit
+          className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-2 leading-tight" 
         >
-          Building products <br />
-          with <span className="text-cyan-400">React & Node.</span>
+          Full-Stack Developer
         </motion.h1>
+        
+        {/* Line 3: The Tech Stack (The Callout) */}
+        <motion.h2 
+          variants={itemVariants} 
+          // Reduced to 3xl/4xl
+          className="text-3xl md:text-4xl font-extrabold mb-8 text-cyan-400" 
+        >
+          Specializing in the PERN Stack.
+        </motion.h2>
         
         {/* Subtext: Value Proposition */}
         <motion.p 
           variants={itemVariants} 
-          className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed" 
         >
-          I turn complex problem statements into elegant, scalable, and fully-tested applications using React, PostgreSQL, and modern cloud deployment strategies.
+          I turn complex problem statements into elegant, scalable, and fully-tested solutions using React, TypeScript, and modern deployment strategies.
         </motion.p>
-
+        
         {/* Buttons */}
         <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-12">
           <a 
             href="#projects" 
             className="bg-cyan-400 text-slate-900 px-8 py-3 rounded-lg font-semibold shadow-md hover:bg-cyan-300 transition-all"
           >
-            View My Case Studies
+            View My Projects
           </a>
           <a 
             href="#contact" 

@@ -5,8 +5,8 @@
     "description": "A full-stack blogging platform offering user authentication, rich text editing, and image uploads. Designed to provide a seamless content creation experience.",
     "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
     "repoLink": "https://github.com/Mikiyas-STP/Blogify",
-    "demoLink": "#",
-    "image": "/images/Blogify-Logo.webp"
+    "demoLink": "https://blogifyfend.hosting.codeyourfuture.io/",
+    "image": "/images/blogify.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
     "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
     "demoLink": "https://planyourfuture-frontend.hosting.codeyourfuture.io/",
-    "image": "/images/Screenshot 2026-01-22 at 18.05.07.png"
+    "image": "/images/pyf.png"
   },
   {
     "id": 3,
@@ -23,8 +23,8 @@
     "description": "A lightweight chat application implemented in JavaScript using WebSockets to enable real-time bidirectional communication. Each client maintains an open WebSocket connection with the server. Messages sent by a user are received by the server and broadcast to every connected client, allowing immediate updates in the chat interface.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
     "repoLink": "https://github.com/Mikiyas-STP/ChatAppRefined",
-    "demoLink": "#",
-    "image": "/images/61x3GIwnW0L.png"
+    "demoLink": "https://mikiyas-stp-frontend-chatapp-refined.hosting.codeyourfuture.io/",
+    "image": "/images/chatapp.png"
   },
   {
     "id": 4,
@@ -32,7 +32,25 @@
     "description": "A real-time collaborative whiteboard implemented in JavaScript using WebSockets for bidirectional communication. The client captures drawing events from the canvas and sends them to the server, which then broadcasts the events to all connected users. This makes the shared board update immediately across all sessions.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
     "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
-    "demoLink": "https://planyourfuture-frontend.hosting.codeyourfuture.io/",
-    "image": "/images/advisory-board-icon-element-design-600nw-2677135321.webp"
+    "demoLink": "https://mikiyas-stp.hosting.codeyourfuture.io/",
+    "image": "/images/collab.png"
+  },
+  {
+    "id": 5,
+    "title": "CodeWar Stars",
+    "description": "An advanced API project that retrieves Codewars user rankings and displays them in a comparative leaderboard.",
+    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "API", "Coolify deployment"],
+    "repoLink": "https://github.com/Mikiyas-STP/codewars-stars",
+    "demoLink": "https://codewars-stars-mgm.netlify.app/",
+    "image": "/images/codewarstar.png"
+  },
+  {
+    "id": 6,
+    "title": "TV-Show Project",
+    "description": "An advanced API project that retrieves movie data using API from  and displays them in a comparative leaderboard.",
+    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "API", "Coolify deployment"],
+    "repoLink": "https://github.com/Mikiyas-STP/Project-TV-Show",
+    "demoLink": "#notdeployedyet",
+    "image": "/images/projectapi.png"
   }
 ]
