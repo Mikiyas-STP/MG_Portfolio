@@ -1,5 +1,3 @@
-// src/data/skills.ts - FINAL ICON-DRIVEN STRUCTURE
-
 export const skillCategories = [
     {
         category: 'Core Full-Stack',

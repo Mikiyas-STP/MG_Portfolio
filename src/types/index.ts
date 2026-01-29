@@ -2,19 +2,17 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  technologies: string[]; //An array of strings
+  technologies: string[];
   repoLink: string;
-  demoLink?: string; //Optional: Not all projects have a live demo
-  image: string;     //Path to the image
+  demoLink?: string; 
+  image: string; 
 }
 
 export interface SocialLink {
-  platform: string; //e.g., "GitHub", "LinkedIn"
+  platform: string;
   url: string;
-  icon: string;     //We will store the icon name here later
+  icon: string; 
 }
-
-// ... (Your Project and SocialLink interfaces are above this)
 
 export interface GitHubProfile {
   name: string;

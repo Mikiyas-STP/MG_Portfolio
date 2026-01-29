@@ -1,5 +1,3 @@
-// src/main.tsx - FINAL AESTHETIC VERSION
-
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
@@ -8,7 +6,6 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* NEW: The Starfield Container is placed here to cover the whole view */}
     <div className="starfield">
       <div className="stars-layer layer-3"></div>
       <div className="stars-layer layer-2"></div>

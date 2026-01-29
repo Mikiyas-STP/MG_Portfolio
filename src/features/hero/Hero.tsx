@@ -1,14 +1,9 @@
-// src/features/hero/Hero.tsx - FINAL COMPRESSED & OPTIMIZED VERSION
-
 import { motion } from 'framer-motion';
 import { useGitHubProfile } from '../../hooks/useGitHubProfile';
 import StatCard from '../../components/common/StatCard';
 
 const Hero = () => {
-  // CONFIRMED USERNAME (This must be correct for the stats to appear)
   const { profile, loading, error } = useGitHubProfile('Mikiyas-STP'); 
-
-  // Framer Motion Variants (Ensures smooth entrance animation)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,7 +20,6 @@ const Hero = () => {
   };
 
   return (
-    // Reduced Vertical Padding for a compact look
     <section className="py-16 md:py-28 max-w-4xl mx-auto text-center px-4"> 
       
       <motion.div 
@@ -34,7 +28,6 @@ const Hero = () => {
         animate="visible"
       >
         
-        {/* Line 1: The Personal Hook (Smaller Top Margin) */}
         <motion.p 
           variants={itemVariants} 
           className="text-xl md:text-2xl text-slate-200 font-medium mb-2" 
@@ -42,25 +35,20 @@ const Hero = () => {
           Hi, I'm Mikiyas.
         </motion.p>
 
-        {/* Line 2: The Core Job Title (Largest, Tight Line Height) */}
         <motion.h1 
           variants={itemVariants} 
-          // Reduced to 6xl/7xl for better vertical fit
           className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-2 leading-tight" 
         >
           Full-Stack Developer
         </motion.h1>
         
-        {/* Line 3: The Tech Stack (The Callout) */}
         <motion.h2 
           variants={itemVariants} 
-          // Reduced to 3xl/4xl
           className="text-3xl md:text-4xl font-extrabold mb-8 text-cyan-400" 
         >
           Specializing in the PERN Stack.
         </motion.h2>
         
-        {/* Subtext: Value Proposition */}
         <motion.p 
           variants={itemVariants} 
           className="text-lg md:text-xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed" 
@@ -68,7 +56,6 @@ const Hero = () => {
           I turn complex problem statements into elegant, scalable, and fully-tested solutions using React, TypeScript, and modern deployment strategies.
         </motion.p>
         
-        {/* Buttons */}
         <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-12">
           <a 
             href="#projects" 
@@ -84,7 +71,6 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* Stats Section */}
         {!error && !loading && (
           <motion.div variants={itemVariants} className="flex justify-center gap-6 md:gap-10">
             <StatCard 
@@ -98,13 +84,10 @@ const Hero = () => {
               loading={loading} 
             />
           </motion.div>
-        )}
-        
-        {/* Show error if necessary */}
+        )}        
         {error && (
             <p className="text-red-500 mt-4">Could not load GitHub stats. Please check the console for details.</p>
         )}
-        
       </motion.div>
     </section>
   );

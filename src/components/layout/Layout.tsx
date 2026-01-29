@@ -1,5 +1,3 @@
-// src/components/layout/Layout.tsx - FINAL, TRANSPARENT NAVIGATION VERSION
-
 import { ReactNode } from 'react';
 import { socialLinks } from '../../data/socials';
 import SocialIcon from '../common/SocialIcon';
@@ -12,22 +10,15 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen">
-      
-      {/* HEADER: Floating, Translucent (Glassy) NavBar */}
-      {/* Key Fix: bg-white/10 (highly transparent) + backdrop-blur + strong shadow */}
       <header className="bg-white/10 backdrop-blur-lg sticky top-0 z-50 border-b border-white/20 shadow-2xl">
         <nav className="max-w-4xl mx-auto flex justify-between items-center p-4">
           <Link to="/" className="font-bold text-xl tracking-tight text-white transition-colors hover:text-cyan-400">
             <span className="text-cyan-400">S/W Eng</span> | <span className="text-cyan-400">PERN Stack</span>
           </Link>
-
-    
-          
-          {/* Navigation Links: Pill-Style (Text color must be white for visibility) */}
           <ul className="flex gap-2 text-sm font-medium"> 
             <li>
                 <a 
-                    href="#skills" // ⬅️ NEW LINK TO SKILLS SECTION
+                    href="#skills"
                     className="hover:bg-white/20 px-3 py-2 rounded-full text-white transition-all font-semibold"
                 >
                     Skills
@@ -41,11 +32,8 @@ const Layout = ({ children }: LayoutProps) => {
                 Projects
               </a>
             </li>
-
-            {/* NEW: CV/Resume Link - Primary CTA */}
             <li>
                 <a 
-                    // CRITICAL FIX: The path to a file in 'public' should start with a /
                     href="/images/cv-template.pdf" 
                     target="_blank"
                     className="bg-cyan-400 px-3 py-2 rounded-full text-slate-900 font-semibold hover:bg-cyan-300 transition-all"
@@ -70,7 +58,6 @@ const Layout = ({ children }: LayoutProps) => {
         {children} 
       </main>
 
-      {/* FOOTER: Seamless Dark Color */}
       <footer id="contact" className="bg-slate-900 text-white py-12 mt-auto border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>

@@ -1,5 +1,3 @@
-// src/pages/Home.tsx - FINAL VERSION
-
 import Hero from '../features/hero/Hero';
 import ProjectList from '../features/projects/ProjectList';
 import AboutMe from '../features/about/AboutMe'; 
@@ -10,7 +8,7 @@ const Home = () => {
     <>
       <Hero />
       <AboutMe />
-      <SkillsGrid /> {/* ⬅️ NEW SECTION: Skills Grid */}
+      <SkillsGrid />
       <ProjectList /> 
     </>
   );

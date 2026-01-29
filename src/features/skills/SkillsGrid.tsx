@@ -1,12 +1,8 @@
-// src/features/skills/SkillsGrid.tsx - STABLE VERSION REVERT
-
 import { motion } from 'framer-motion';
 import { skillCategories } from '../../data/skills';
-import * as LucideIcons from 'lucide-react'; // ⬅️ Re-enable Lucide lookup
+import * as LucideIcons from 'lucide-react';
 
-// Helper to dynamically get the icon component (Re-introduced)
 const getIcon = (iconName: string, className: string) => {
-    // We use the icon name from the data to look up the component
     const IconComponent = (LucideIcons as any)[iconName.charAt(0).toUpperCase() + iconName.slice(1)];
     return IconComponent ? <IconComponent className={className} aria-hidden="true" /> : null;
 };
@@ -55,7 +51,6 @@ const SkillsGrid = () => {
                                     }`}
                                 >
                                     <span className="mr-2">
-                                        {/* ⬅️ Reverted to using skill.icon for lookup */}
                                         {getIcon(skill.icon, "w-6 h-6")} 
                                     </span>
                                     {skill.name}

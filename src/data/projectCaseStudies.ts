@@ -1,12 +1,8 @@
-// src/data/projectCaseStudies.ts - FINAL PROJECT DATA
-
 interface CaseStudy {
   challenge: string;
   solution: string;
   architectureDecisions: string[];
 }
-
-// Map Project ID to its unique case study content
 export const caseStudies: Record<number, CaseStudy> = {
   1: {
     challenge: 'The primary goal was to demonstrate full-stack proficiency by building a scalable, fully-functional blogging platform (Blogify). The complexity involved managing user sessions, rich text editing, and relational data integrity.',
@@ -69,8 +65,6 @@ export const caseStudies: Record<number, CaseStudy> = {
   ]
 }
 };
-
-// Function to safely retrieve case study data
 export const getCaseStudyById = (id: number): CaseStudy | undefined => {
     return caseStudies[id];
 }
