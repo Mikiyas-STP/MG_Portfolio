@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { socialLinks } from '../../data/socials';
 import SocialIcon from '../common/SocialIcon';
 import {  Link } from 'react-router-dom';
