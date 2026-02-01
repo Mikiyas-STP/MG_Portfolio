@@ -25,7 +25,7 @@ const SkillsGrid = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {skillCategories.map((categoryData, index) => (
+                {skillCategories.map((categoryData) => (
                     <motion.div
                         key={categoryData.category}
                         initial="hidden"

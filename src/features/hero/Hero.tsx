@@ -1,3 +1,4 @@
+import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useGitHubProfile } from '../../hooks/useGitHubProfile';
 import StatCard from '../../components/common/StatCard';
@@ -14,10 +15,21 @@ const Hero = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.17, 0.55, 0.55, 1] } },
-  };
+  const itemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, 0.01, -0.05, 0.95],
+    },
+  },
+};
+ 
 
   return (
     <section className="py-16 md:py-28 max-w-4xl mx-auto text-center px-4"> 
