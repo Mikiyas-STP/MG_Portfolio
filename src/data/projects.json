@@ -50,7 +50,7 @@
     "description": "An advanced API project that retrieves movie data using API from  and displays them in a comparative leaderboard.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "API", "Coolify deployment"],
     "repoLink": "https://github.com/Mikiyas-STP/Project-TV-Show",
-    "demoLink": "#notdeployedyet",
+    "demoLink": "https://cyf-mikiyas-stp-tv.netlify.app/",
     "image": "/images/projectapi.png"
   }
 ]
