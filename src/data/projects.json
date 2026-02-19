@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "title": "Blogify",
-    "description": "A full-stack blogging platform offering user authentication, rich text editing, and image uploads. Designed to provide a seamless content creation experience.",
-    "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
-    "repoLink": "https://github.com/Mikiyas-STP/Blogify",
-    "demoLink": "https://blogifyfend.hosting.codeyourfuture.io/",
-    "image": "/images/blogify.png"
-  },
-  {
-    "id": 2,
     "title": "Plan Your Future",
-    "description": "Plan Your Future, Launch Your Career. The essential development planner for CodeYourFuture graduates. Set SMART goals, track your progress, and get feedback",
+    "description": "Architected a comprehensive development planner for CodeYourFuture graduates within an Agile team environment. Developed SMART goal tracking and progress visualization tools to streamline the transition from education to employment.",
     "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
     "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
     "demoLink": "https://planyourfuture-frontend.hosting.codeyourfuture.io/",
     "image": "/images/pyf.png"
   },
   {
+    "id": 2,
+    "title": "Blogify",
+    "description": "Engineered a robust full-stack blogging platform featuring secure JWT authentication, rich text editing, and optimized image uploads. Focused on building a scalable architecture and seamless content management experience.",
+    "technologies": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "PlayWrite", "Coolify"],
+    "repoLink": "https://github.com/Mikiyas-STP/Blogify",
+    "demoLink": "https://blogifyfend.hosting.codeyourfuture.io/",
+    "image": "/images/blogify.png"
+  },
+  {
     "id": 3,
+    "title": "Collaboration Board",
+    "description": "Developed a real-time collaborative whiteboard using WebSockets for instant bidirectional data synchronization. Captured canvas drawing events and broadcasted them across multiple client sessions for a seamless shared experience.",
+    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
+    "repoLink": "https://github.com/Mikiyas-STP/CollaborationBoard",
+    "demoLink": "https://mikiyas-stp.hosting.codeyourfuture.io/",
+    "image": "/images/collab.png"
+  },
+  {
+    "id": 4,
     "title": "ChatApp",
-    "description": "A lightweight chat application implemented in JavaScript using WebSockets to enable real-time bidirectional communication. Each client maintains an open WebSocket connection with the server. Messages sent by a user are received by the server and broadcast to every connected client, allowing immediate updates in the chat interface.",
+    "description": "Implemented a real-time communication platform utilizing WebSockets to handle concurrent client-server connections. Designed the interface to update dynamically as messages are broadcast to all active users.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
     "repoLink": "https://github.com/Mikiyas-STP/ChatAppRefined",
     "demoLink": "https://mikiyas-stp-frontend-chatapp-refined.hosting.codeyourfuture.io/",
     "image": "/images/chatapp.png"
   },
   {
-    "id": 4,
-    "title": "Collaboration Board",
-    "description": "A real-time collaborative whiteboard implemented in JavaScript using WebSockets for bidirectional communication. The client captures drawing events from the canvas and sends them to the server, which then broadcasts the events to all connected users. This makes the shared board update immediately across all sessions.",
-    "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
-    "repoLink": "https://github.com/Faithy4444/Development-Planner-Group-2",
-    "demoLink": "https://mikiyas-stp.hosting.codeyourfuture.io/",
-    "image": "/images/collab.png"
-  },
-  {
     "id": 5,
     "title": "CodeWar Stars",
-    "description": "An advanced API project that retrieves Codewars user rankings and displays them in a comparative leaderboard.",
+    "description": "Developed a dynamic leaderboard that consumes the Codewars API to visualize developer progress. Implemented real-time data fetching to display and compare user rankings effectively.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "API", "Coolify deployment"],
     "repoLink": "https://github.com/Mikiyas-STP/codewars-stars",
     "demoLink": "https://codewars-stars-mgm.netlify.app/",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "title": "TV-Show Project",
-    "description": "An advanced API project that retrieves movie data using API from  and displays them in a comparative leaderboard.",
+    "description": "Designed a responsive media search interface that dynamically fetches and filters content from movie APIs. Focused on efficient DOM manipulation and a clean, user-centric browsing experience.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "API", "Coolify deployment"],
     "repoLink": "https://github.com/Mikiyas-STP/Project-TV-Show",
     "demoLink": "https://cyf-mikiyas-stp-tv.netlify.app/",
