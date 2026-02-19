@@ -5,6 +5,7 @@ import StatCard from '../../components/common/StatCard';
 
 const Hero = () => {
   const { profile, loading, error } = useGitHubProfile('Mikiyas-STP'); 
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -16,20 +17,19 @@ const Hero = () => {
   };
 
   const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.4, 0, 0.2, 1],
+    hidden: {
+      opacity: 0,
+      y: 20,
     },
-  },
-};
- 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1],
+      },
+    },
+  };
 
   return (
     <section className="py-16 md:py-28 max-w-4xl mx-auto text-center px-4"> 
@@ -47,25 +47,28 @@ const Hero = () => {
           Hi, I'm Mikiyas.
         </motion.p>
 
+        {/* Issue #3 Fix: Rebranded as Software Engineer */}
         <motion.h1 
           variants={itemVariants} 
           className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-2 leading-tight" 
         >
-          Full-Stack Developer
+          Software Engineer
         </motion.h1>
         
+        {/* Issue #3 Fix: Highlighted versatility */}
         <motion.h2 
           variants={itemVariants} 
           className="text-3xl md:text-4xl font-extrabold mb-8 text-cyan-400" 
         >
-          Specializing in the PERN Stack.
+          Versatile Full-Stack Developer.
         </motion.h2>
         
+        {/* Issue #3 Fix: Adjusted subtext to emphasize adaptability */}
         <motion.p 
           variants={itemVariants} 
           className="text-lg md:text-xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed" 
         >
-          I turn complex problem statements into elegant, scalable, and fully-tested solutions using React, TypeScript, and modern deployment strategies.
+          I am an adaptable engineer with a strong foundation in the PERN stack, dedicated to building scalable solutions and quickly mastering new technologies to solve complex problems.
         </motion.p>
         
         <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-12">
@@ -85,16 +88,31 @@ const Hero = () => {
 
         {!error && !loading && (
           <motion.div variants={itemVariants} className="flex justify-center gap-6 md:gap-10">
-            <StatCard 
-              label="Repos" 
-              value={profile?.public_repos || 0} 
-              loading={loading} 
-            />
-            <StatCard 
-              label="Followers" 
-              value={profile?.followers || 0} 
-              loading={loading} 
-            />
+            {/* Issue #2 Fix: Wrapped in <a> for interactivity and updated labels/values */}
+            <a 
+              href="https://github.com/Mikiyas-STP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:scale-105 transition-transform"
+            >
+              <StatCard 
+                label="Repositories" 
+                value={profile?.public_repos || 0} 
+                loading={loading} 
+              />
+            </a>
+            <a 
+              href="https://github.com/Mikiyas-STP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:scale-105 transition-transform"
+            >
+              <StatCard 
+                label="GitHub Profile" 
+                value="Explore" 
+                loading={loading} 
+              />
+            </a>
           </motion.div>
         )}        
         {error && (
