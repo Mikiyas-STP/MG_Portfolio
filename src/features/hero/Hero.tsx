@@ -109,7 +109,7 @@ const Hero = () => {
             >
               <StatCard 
                 label="My GitHub Profile" 
-                value="See" 
+                value="Visit" 
                 loading={loading} 
               />
             </a>
