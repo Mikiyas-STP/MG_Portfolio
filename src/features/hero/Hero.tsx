@@ -108,8 +108,8 @@ const Hero = () => {
               className="hover:scale-105 transition-transform"
             >
               <StatCard 
-                label="GitHub Profile" 
-                value="Explore" 
+                label="My GitHub Profile" 
+                value="See" 
                 loading={loading} 
               />
             </a>

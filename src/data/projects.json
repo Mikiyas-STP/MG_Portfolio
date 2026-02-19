@@ -22,7 +22,7 @@
     "title": "Collaboration Board",
     "description": "Developed a real-time collaborative whiteboard using WebSockets for instant bidirectional data synchronization. Captured canvas drawing events and broadcasted them across multiple client sessions for a seamless shared experience.",
     "technologies": ["HTML-5", "CSS", "JavaScript", "DOM", "Web-Socket", "Coolify deployment"],
-    "repoLink": "https://github.com/Mikiyas-STP/CollaborationBoard",
+    "repoLink": "https://github.com/Mikiyas-STP/CollaboratorBoard",
     "demoLink": "https://mikiyas-stp.hosting.codeyourfuture.io/",
     "image": "/images/collab.png"
   },
