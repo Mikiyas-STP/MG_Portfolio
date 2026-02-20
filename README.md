@@ -1,9 +1,9 @@
-# MG_Portfolio
+# Portfolio
 
 A personal portfolio built with **TypeScript**, **React**, and **Tailwind CSS**, inspired by a minimalist design and modern web standards.:contentReference[oaicite:0]{index=0}
 
 ## 🚀 Live Demo
-(https://mikipf.netlify.app/)
+https://mikipf.netlify.app/
 
 ---
 
@@ -115,5 +115,3 @@ To deploy this portfolio:
 ## 🙌 Acknowledgements
 
 Thanks to open‑source tools and creators in the community for inspiration and support.
-
-````
